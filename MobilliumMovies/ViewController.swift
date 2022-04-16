@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import NetworkLayer
 
 class ViewController: UIViewController {
-
+    var manager:NetworkManager!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        manager = NetworkManager()
+        manager.getNewMovies(kind: .upcoming(page: 1)) { movie, error in
+          
+        }
     }
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		005EBEB0469AFFB925200542 /* libPods-MobilliumMovies.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE1257DB8E60B83482D9698 /* libPods-MobilliumMovies.a */; };
 		BABD4EDA280AE7A7009E1B68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD4ED9280AE7A7009E1B68 /* AppDelegate.swift */; };
 		BABD4EDC280AE7A7009E1B68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD4EDB280AE7A7009E1B68 /* SceneDelegate.swift */; };
 		BABD4EDE280AE7A7009E1B68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD4EDD280AE7A7009E1B68 /* ViewController.swift */; };
@@ -14,6 +15,8 @@
 		BABD4EE3280AE7A8009E1B68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABD4EE2280AE7A8009E1B68 /* Assets.xcassets */; };
 		BABD4EE6280AE7A8009E1B68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BABD4EE4280AE7A8009E1B68 /* LaunchScreen.storyboard */; };
 		BABD4EF1280AE7A9009E1B68 /* MobilliumMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD4EF0280AE7A9009E1B68 /* MobilliumMoviesTests.swift */; };
+		BABD4F2F280B0B25009E1B68 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABD4F2E280B0B25009E1B68 /* NetworkLayer.framework */; };
+		BABD4F30280B0B25009E1B68 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BABD4F2E280B0B25009E1B68 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,7 +29,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BABD4F31280B0B25009E1B68 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BABD4F30280B0B25009E1B68 /* NetworkLayer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1AE1257DB8E60B83482D9698 /* libPods-MobilliumMovies.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobilliumMovies.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9E57B94E3DF49ACB3ED9726 /* Pods-MobilliumMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilliumMovies.release.xcconfig"; path = "Target Support Files/Pods-MobilliumMovies/Pods-MobilliumMovies.release.xcconfig"; sourceTree = "<group>"; };
 		BABD4ED6280AE7A7009E1B68 /* MobilliumMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobilliumMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABD4ED9280AE7A7009E1B68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BABD4EDB280AE7A7009E1B68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +56,8 @@
 		BABD4EE7280AE7A8009E1B68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BABD4EEC280AE7A9009E1B68 /* MobilliumMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilliumMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABD4EF0280AE7A9009E1B68 /* MobilliumMoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilliumMoviesTests.swift; sourceTree = "<group>"; };
+		BABD4F2E280B0B25009E1B68 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB3A42D3FC61FC58DDC9A6A /* Pods-MobilliumMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilliumMovies.debug.xcconfig"; path = "Target Support Files/Pods-MobilliumMovies/Pods-MobilliumMovies.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005EBEB0469AFFB925200542 /* libPods-MobilliumMovies.a in Frameworks */,
+				BABD4F2F280B0B25009E1B68 /* NetworkLayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,12 +80,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A164C5C7C163B2E2071FBB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBB3A42D3FC61FC58DDC9A6A /* Pods-MobilliumMovies.debug.xcconfig */,
+				B9E57B94E3DF49ACB3ED9726 /* Pods-MobilliumMovies.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		47F539417F6E5E9BF214738C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BABD4F2E280B0B25009E1B68 /* NetworkLayer.framework */,
+				1AE1257DB8E60B83482D9698 /* libPods-MobilliumMovies.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BABD4ECD280AE7A6009E1B68 = {
 			isa = PBXGroup;
 			children = (
 				BABD4ED8280AE7A7009E1B68 /* MobilliumMovies */,
 				BABD4EEF280AE7A9009E1B68 /* MobilliumMoviesTests */,
 				BABD4ED7280AE7A7009E1B68 /* Products */,
+				3A164C5C7C163B2E2071FBB0 /* Pods */,
+				47F539417F6E5E9BF214738C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BABD4F00280AE7A9009E1B68 /* Build configuration list for PBXNativeTarget "MobilliumMovies" */;
 			buildPhases = (
+				CE663EB1A4F54E66D4708062 /* [CP] Check Pods Manifest.lock */,
 				BABD4ED2280AE7A7009E1B68 /* Sources */,
 				BABD4ED3280AE7A7009E1B68 /* Frameworks */,
 				BABD4ED4280AE7A7009E1B68 /* Resources */,
+				BABD4F31280B0B25009E1B68 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +237,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE663EB1A4F54E66D4708062 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobilliumMovies-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BABD4ED2280AE7A7009E1B68 /* Sources */ = {
@@ -292,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -346,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -358,6 +428,7 @@
 		};
 		BABD4F01280AE7A9009E1B68 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBB3A42D3FC61FC58DDC9A6A /* Pods-MobilliumMovies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -386,6 +457,7 @@
 		};
 		BABD4F02280AE7A9009E1B68 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9E57B94E3DF49ACB3ED9726 /* Pods-MobilliumMovies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
