@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BABD4F22280B09E6009E1B68 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = BABD4F16280B09E5009E1B68 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BAB9ADB1280C41FE00207971 /* Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9ADB0280C41FE00207971 /* Decoders.swift */; };
 		BABD4F2D280B0A12009E1B68 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD4F2C280B0A12009E1B68 /* File.swift */; };
 		BABD4F34280B204E009E1B68 /* MovieResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD4F33280B204E009E1B68 /* MovieResults.swift */; };
 		BABD4F36280B210B009E1B68 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD4F35280B210B009E1B68 /* Movie.swift */; };
@@ -24,8 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BAB9ADB0280C41FE00207971 /* Decoders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoders.swift; sourceTree = "<group>"; };
 		BABD4F13280B09E5009E1B68 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BABD4F16280B09E5009E1B68 /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		BABD4F2C280B0A12009E1B68 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		BABD4F33280B204E009E1B68 /* MovieResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResults.swift; sourceTree = "<group>"; };
 		BABD4F35280B210B009E1B68 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -52,15 +52,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAB9ADAF280C41F300207971 /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				BAB9ADB0280C41FE00207971 /* Decoders.swift */,
+			);
+			path = Decoder;
+			sourceTree = "<group>";
+		};
 		BABD4F09280B09E5009E1B68 = {
 			isa = PBXGroup;
 			children = (
+				BAB9ADAF280C41F300207971 /* Decoder */,
 				BABD4F51280B29D2009E1B68 /* Vendor */,
 				BABD4F42280B257F009E1B68 /* APIService */,
 				BABD4F41280B2579009E1B68 /* Encoding */,
 				BABD4F32280B201C009E1B68 /* DTOs */,
 				BABD4F2B280B09FE009E1B68 /* Services */,
-				BABD4F15280B09E5009E1B68 /* NetworkLayer */,
 				BABD4F14280B09E5009E1B68 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,14 +79,6 @@
 				BABD4F13280B09E5009E1B68 /* NetworkLayer.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		BABD4F15280B09E5009E1B68 /* NetworkLayer */ = {
-			isa = PBXGroup;
-			children = (
-				BABD4F16280B09E5009E1B68 /* NetworkLayer.h */,
-			);
-			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 		BABD4F2B280B09FE009E1B68 /* Services */ = {
@@ -136,7 +136,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BABD4F22280B09E6009E1B68 /* NetworkLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +219,7 @@
 				BABD4F2D280B0A12009E1B68 /* File.swift in Sources */,
 				BABD4F45280B25E9009E1B68 /* Router.swift in Sources */,
 				BABD4F36280B210B009E1B68 /* Movie.swift in Sources */,
+				BAB9ADB1280C41FE00207971 /* Decoders.swift in Sources */,
 				BABD4F4D280B2815009E1B68 /* JSONParameterEncoding.swift in Sources */,
 				BABD4F57280B2ACD009E1B68 /* MovieApi.swift in Sources */,
 				BABD4F53280B29EA009E1B68 /* Result.swift in Sources */,

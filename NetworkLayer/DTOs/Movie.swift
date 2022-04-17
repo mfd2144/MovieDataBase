@@ -12,7 +12,7 @@ public struct Movie {
     public let posterPath: String
     public let backdrop: String?
     public let title: String
-    public let releaseDate: String
+    public let releaseDate: Date
     public let rating: Double
     public let overview: String
 }
@@ -32,9 +32,9 @@ extension Movie: Decodable {
         let movieContainer = try decoder.container(keyedBy: MovieCodingKeys.self)
         id = try movieContainer.decode(Int.self, forKey: .id)
         posterPath = try movieContainer.decode(String.self, forKey: .posterPath)
-        backdrop =  try? movieContainer.decode(String.self, forKey: .backdrop) 
+        backdrop =  try? movieContainer.decode(String.self, forKey: .backdrop)
         title = try movieContainer.decode(String.self, forKey: .title)
-        releaseDate = try movieContainer.decode(String.self, forKey: .releaseDate)
+        releaseDate = try movieContainer.decode(Date.self, forKey: .releaseDate)
         rating = try movieContainer.decode(Double.self, forKey: .rating)
         overview = try movieContainer.decode(String.self, forKey: .overview)
     }

@@ -27,7 +27,7 @@ public struct NetworkManager {
                         return
                     }
                     do {
-                        let apiResponse = try JSONDecoder().decode(MovieResults.self, from: responseData)
+                        let apiResponse = try PlainDateDecoder.decoder.decode(MovieResults.self, from: responseData)
                         completion(apiResponse.movies,nil)
                     }catch{
                         completion(nil, NetworkResponse.unableToDecode.rawValue)
