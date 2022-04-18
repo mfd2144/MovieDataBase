@@ -17,7 +17,6 @@ final class DetailPageViewController:UITableViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         setNavigationView()
     }
     private func setTableView(){
@@ -25,6 +24,7 @@ final class DetailPageViewController:UITableViewController{
         tableView.register(OtherDetailsCell.self, forCellReuseIdentifier: OtherDetailsCell.id)
         tableView.register(OverviewTextCell.self, forCellReuseIdentifier: OverviewTextCell.id)
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .white
         tableView.allowsSelection = false
         tableView.showsVerticalScrollIndicator = false
     }

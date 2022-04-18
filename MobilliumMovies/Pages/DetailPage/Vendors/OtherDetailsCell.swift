@@ -92,6 +92,7 @@ class OtherDetailsCell: UITableViewCell {
     }
     
     private func setCell(){
+        backgroundColor = .white
         rateStack.addArrangedSubview(rateLabel)
         rateStack.addArrangedSubview(rateLabel2)
         let views:[UIView] = [imdbImageView,starImageView,rateStack,yellowDot,dateLabel]

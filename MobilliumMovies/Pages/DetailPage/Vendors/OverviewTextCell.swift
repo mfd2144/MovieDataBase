@@ -24,11 +24,12 @@ class OverviewTextCell: UITableViewCell {
     }()
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+   
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        backgroundColor = .white
         addSubview(descriptionLabel)
         NSLayoutConstraint.activate([
             descriptionLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
