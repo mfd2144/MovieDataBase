@@ -7,3 +7,5 @@
 <br>Compositional layout</br>
 <br>Paginations & Pull To Refresh</br>
 <br>Error & Load handle</br>
+
+<br>Note:Open terminal, start 'pod deintegrate' command,then start 'pod install' command </br>
