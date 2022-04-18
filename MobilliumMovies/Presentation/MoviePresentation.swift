@@ -11,7 +11,7 @@ import NetworkLayer
 struct MoviePresentation{
     let title:String
     let id:Int
-    let imageUrl:String
+    let imageUrl:String?
     let backDropUrl:String?
     let releaseDate:Date
     let rating:Double
@@ -20,7 +20,12 @@ struct MoviePresentation{
     init(movieObject:Movie){
         self.title = movieObject.title
         self.id = movieObject.id
-        self.imageUrl = "https://image.tmdb.org/t/p/w500"+movieObject.posterPath
+        if let urlString = movieObject.posterPath{
+            self.imageUrl = "https://image.tmdb.org/t/p/w500"+urlString
+        }else{
+            self.imageUrl = nil
+        }
+       
         if let urlString = movieObject.backdrop{
             self.backDropUrl = "https://image.tmdb.org/t/p/w500"+urlString
         }else{

@@ -15,8 +15,10 @@ final class MainPageBuilder{
         let router = MainPageRouter()
         view.viewModel = viewModel
         viewModel.delegate = view
+        viewModel.router = router
         viewModel.networklayerManager = appContainer.networkLayerManager
-        router.view = view
-        return view
+        let navigationController = UINavigationController(rootViewController: view)
+        router.navigationController = navigationController
+        return navigationController
     }
 }

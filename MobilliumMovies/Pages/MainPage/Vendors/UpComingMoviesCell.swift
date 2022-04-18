@@ -20,8 +20,6 @@ class UpComingMoviesCell: UICollectionViewCell {
     @IBOutlet weak var movieImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        movieImage.image = UIImage.init(named: "ege")
     }
     override func updateConfiguration(using state: UICellConfigurationState) {
         super.updateConfiguration(using: state)
@@ -36,7 +34,8 @@ class UpComingMoviesCell: UICollectionViewCell {
         movieTitle.text = "\(movie.title) (\(year))"
         movieDescription.text = movie.overview
         dateLabel.text = Date.dateStringWithDots(date: movie.releaseDate)
-        guard let url = URL.init(string: movie.imageUrl) else {return}
+        guard let urlString = movie.imageUrl ?? movie.backDropUrl else {return}
+        guard let url = URL.init(string: urlString) else {return}
         movieImage.sd_setImage(with: url)
     }
 

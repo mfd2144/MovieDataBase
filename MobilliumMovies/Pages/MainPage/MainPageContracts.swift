@@ -12,6 +12,7 @@ protocol MainPageViewModelDelegate:AnyObject{
     func fetchDataAtStart()
     func fetchData(page:Int)
     func refresh()
+    func  toDetailPage(_ movie:MoviePresentation)
 }
 
 protocol MainPageViewModelProtocol:AnyObject{
@@ -19,7 +20,7 @@ protocol MainPageViewModelProtocol:AnyObject{
 }
 
 
-protocol MainPageRouterProtocol{
+protocol MainPageRouterProtocol:AnyObject{
     func routeToPage(_ route:MainPageRoutes)
 }
 
@@ -28,6 +29,7 @@ enum MainPageViewModelOutputs{
     case appendUpComingResults([MoviePresentation])
     case appendNowPlayingResults([MoviePresentation])
     case refreshUpComingResults([MoviePresentation])
+   
 }
 
 enum MainPageRoutes{

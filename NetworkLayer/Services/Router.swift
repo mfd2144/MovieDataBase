@@ -22,6 +22,7 @@ class Router<HTTPEndPoint: HTTPEndPointType>: NetworkRouter {
         let session = URLSession.shared
         do {
             let request = try self.buildRequest(from: route)
+//            print(request.url?.absoluteString ?? "")
             task = session.dataTask(with: request, completionHandler: { data, response, error in
                 completion(data, response, error)
             })

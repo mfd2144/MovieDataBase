@@ -6,9 +6,14 @@
 //
 
 import Foundation
+import UIKit
 final class MainPageRouter: MainPageRouterProtocol{
-    var view:MainPageView!
+    var navigationController:UINavigationController!
     func routeToPage(_ route: MainPageRoutes) {
-        
+        switch route {
+        case .toDetailPage(let moviePresentation):
+            let detailPage = DetailPageBuilder.make(movie: moviePresentation)
+            navigationController.pushViewController(detailPage, animated: true)
+        }
     }
 }

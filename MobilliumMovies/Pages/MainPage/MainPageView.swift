@@ -27,10 +27,19 @@ class MainPageView: UICollectionViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<MovieSection, MovieItem>
     typealias Snapshot = NSDiffableDataSourceSnapshot<MovieSection, MovieItem>
     
+    //MARK: - Life Cycle of controller
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.fetchDataAtStart()
         setCollectionView()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNavigationController()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.isHidden = false
     }
     
     //MARK: - Collection View Components
@@ -83,6 +92,7 @@ class MainPageView: UICollectionViewController {
         collectionView.register(PageControllerFooter.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: PageControllerFooter.reuseIdentifier)
         collectionView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refreshMovieData(_:)), for: .valueChanged)
+        collectionView.showsVerticalScrollIndicator = false
         applySnapshot()
     }
     
@@ -90,9 +100,11 @@ class MainPageView: UICollectionViewController {
         let section = indexPath.section
         switch section{
         case 0:
-            print("movie: \(nowPlayingMovieList[indexPath.row])")
+           let movie = nowPlayingMovieList[indexPath.row]
+            viewModel.toDetailPage(movie)
         case 1:
-            print("movie: \(upComingMovieList[indexPath.row])")
+           let movie = upComingMovieList[indexPath.row]
+            viewModel.toDetailPage(movie)
         default:
             break
         }
@@ -101,6 +113,9 @@ class MainPageView: UICollectionViewController {
     //Refresh controller
     @objc private func refreshMovieData(_ sender:UIRefreshControl){
         viewModel.refresh()
+    }
+    private func setNavigationController(){
+        navigationController?.navigationBar.isHidden = true
     }
 }
 
@@ -129,7 +144,7 @@ extension MainPageView{
         }else{
             item.contentInsets = .init(top: 0, leading: 0, bottom: -40, trailing: 0)
         }
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension:.fractionalWidth(0.6))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension:.fractionalWidth(0.4))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         let pageControllerSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
@@ -164,7 +179,12 @@ extension MainPageView:MainPageViewModelProtocol{
     func handleOutputs(output: MainPageViewModelOutputs) {
         switch output {
         case .anyErrorOccured(let string):
-            break
+            DispatchQueue.main.async { [unowned self] in
+            let alertController = UIAlertController(title: "Caution", message:string, preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .cancel)
+            alertController.addAction(action)
+            present(alertController, animated: true)
+            }
         case .appendUpComingResults(let array):
             DispatchQueue.main.async { [unowned self] in
                 upComingMovieList.append(contentsOf: array)

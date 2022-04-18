@@ -58,11 +58,7 @@ class NowPlayingMoviesCell: UICollectionViewCell {
             title.widthAnchor.constraint(equalTo: widthAnchor,constant: -40),
             title.bottomAnchor.constraint(equalTo: movieDescription.topAnchor),
             title.centerXAnchor.constraint(equalTo: centerXAnchor),
-            
-            
         ])
-        
-        
     }
     private func setCell(){
         guard let movie = movie else {

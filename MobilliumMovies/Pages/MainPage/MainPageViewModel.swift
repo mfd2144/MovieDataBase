@@ -9,6 +9,7 @@ import Foundation
 
 final class MainPageViewModel:MainPageViewModelDelegate{
     weak var delegate: MainPageViewModelProtocol?
+     var router:MainPageRouterProtocol?
     var networklayerManager:NetworkLayerManager!{
         didSet{
             networklayerManager.setUp()
@@ -20,13 +21,16 @@ final class MainPageViewModel:MainPageViewModelDelegate{
     }
     
     func fetchData(page: Int) {
-        print(page)
         callMovies(.upComing(page))
     }
     
     func refresh() {
         callMovies(.nowPlaying(1),append:false)
         callMovies(.upComing(1),append:false)
+    }
+    
+    func toDetailPage(_ movie: MoviePresentation) {
+        router?.routeToPage(.toDetailPage(movie))
     }
     
     private func callMovies(_ type:MovieType,append:Bool=true){
