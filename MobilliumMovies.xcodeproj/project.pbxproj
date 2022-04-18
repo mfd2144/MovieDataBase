@@ -29,6 +29,7 @@
 		BAB30CC5280CB88300F5AD2D /* OtherDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB30CC4280CB88300F5AD2D /* OtherDetailsCell.swift */; };
 		BAB30D05280CC06900F5AD2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB30D04280CC06900F5AD2D /* Assets.xcassets */; };
 		BAB30D07280CD8EE00F5AD2D /* OverviewTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB30D06280CD8EE00F5AD2D /* OverviewTextCell.swift */; };
+		BAB30D0C280CEB2A00F5AD2D /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB30D0B280CEB2A00F5AD2D /* Animator.swift */; };
 		BAB9ADAC280C296800207971 /* PagingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9ADAB280C296800207971 /* PagingInfo.swift */; };
 		BAB9ADAE280C34DD00207971 /* MovieSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9ADAD280C34DD00207971 /* MovieSection.swift */; };
 		BAB9ADB4280C577900207971 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9ADB3280C577900207971 /* Date.swift */; };
@@ -90,6 +91,7 @@
 		BAB30CC4280CB88300F5AD2D /* OtherDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherDetailsCell.swift; sourceTree = "<group>"; };
 		BAB30D04280CC06900F5AD2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB30D06280CD8EE00F5AD2D /* OverviewTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTextCell.swift; sourceTree = "<group>"; };
+		BAB30D0B280CEB2A00F5AD2D /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		BAB9ADAB280C296800207971 /* PagingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingInfo.swift; sourceTree = "<group>"; };
 		BAB9ADAD280C34DD00207971 /* MovieSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSection.swift; sourceTree = "<group>"; };
 		BAB9ADB3280C577900207971 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -234,6 +236,14 @@
 			path = Vendors;
 			sourceTree = "<group>";
 		};
+		BAB30D0A280CEB1500F5AD2D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				BAB30D0B280CEB2A00F5AD2D /* Animator.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		BABD4ECD280AE7A6009E1B68 = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +267,7 @@
 		BABD4ED8280AE7A7009E1B68 /* MobilliumMovies */ = {
 			isa = PBXGroup;
 			children = (
+				BAB30D0A280CEB1500F5AD2D /* Helper */,
 				BA32FA7A280B5BC70056DD41 /* App */,
 				BA598CE3280BA27600FE3BA2 /* Models */,
 				BA32FA99280B79E70056DD41 /* Extension */,
@@ -426,6 +437,7 @@
 				BA32FA87280B5D390056DD41 /* MainPageBuilder.swift in Sources */,
 				BABD4EDA280AE7A7009E1B68 /* AppDelegate.swift in Sources */,
 				BA598CE7280BA73700FE3BA2 /* NetworkLayerManager.swift in Sources */,
+				BAB30D0C280CEB2A00F5AD2D /* Animator.swift in Sources */,
 				BA32FA85280B5D1D0056DD41 /* MainPageRouter.swift in Sources */,
 				BAB30D07280CD8EE00F5AD2D /* OverviewTextCell.swift in Sources */,
 				BA32FAA9280B97190056DD41 /* CALayer.swift in Sources */,

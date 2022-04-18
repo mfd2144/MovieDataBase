@@ -31,6 +31,7 @@ class MainPageView: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.fetchDataAtStart()
+        Animator.sharedInstance.showAnimation()
         setCollectionView()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -177,6 +178,7 @@ extension MainPageView{
 }
 extension MainPageView:MainPageViewModelProtocol{
     func handleOutputs(output: MainPageViewModelOutputs) {
+        Animator.sharedInstance.hideAnimation()
         switch output {
         case .anyErrorOccured(let string):
             DispatchQueue.main.async { [unowned self] in
